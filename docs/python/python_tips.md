@@ -1,4 +1,4 @@
-codepipeline-32.svg :maya: :python: By Dhruv Govil
+:maya: :python: By Dhruv Govil
 
 When I write a Python class that exposes the functionality of a Maya node , I override ```py__repr__```  so that it returns the node's path so I can just pass the object to any Maya commands and it just works.
 
