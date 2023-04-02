@@ -1,0 +1,194 @@
+# info
+site_name: cg_tech
+#site_url: https://squidfunk.github.io/mkdocs-material/
+site_author: yoann Granier
+site_description: Personal computer graphics memo
+
+# repository
+
+#copyright
+copyright: 'Copyright &copy; 2022 QDV-PM'
+
+
+# config
+theme:  
+  name: material
+  custom_dir: site/overrides
+
+  # static files
+  static_templates:
+    - 404.html
+
+  palette:
+    scheme: dracula
+    primary: deep purple
+    accent: deep purple
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  icon:
+    logo: octicons/copilot-16
+  #favicon: assets/images/icons8-oil-rig-48.png
+
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant
+    - navigation.indexes
+    - navigation.expand
+    - navigation.sections
+
+    - search.highlight
+    - search.share
+    - search.suggest 
+
+
+    #- header.autohide
+    - content.code.annotate 
+
+#page tree
+nav:
+  - Home: index.md
+  - Maya:
+    - Introduction: IntroMaya.md
+  - Houdini:
+    - Introduction: IntroHoudini.md
+    - Solaris: solaris.md
+    - Python: houdiniPython.md
+    - Environment variables: hVars.md
+    - Vex:
+      - Variables: vex/vex.md
+      - Snippets: vex/Snippets.md
+  - Color:
+    - Light: colors/introToLight.md
+    - ColorSpace:
+      - CIE XYZ: colors/CIE.md
+      - ACES:
+        - ACES intro: colors/Aces.md
+        - ACES Pipeline: colors/Aces_workflow.md
+        - ACES Notes: colors/Aces_cheatSheet.md
+        - ACES Install: colors/ACES_DCC.md
+  - Rendering:
+    - LPE: rendering/LPE.md
+    - Raytracing: rendering/Raytracing101.md
+    - Lexique: rendering/Lexique.md
+    - OSLSamples: rendering/OSL_samples.md
+  - Programming:
+    - Cmake:
+        - CMake: C/Cmake.md
+    - C++: 
+        - Numerics limit: C/numericsLimits.md
+    - Python: 
+        - Intro: python/python_intro.md
+        - Tips: python/python_tips.md
+        - Virtual Environment: python/venv.md
+        - Packages: python/packages.md
+        - PySide: python/PySide2.md
+    - windows:
+        - Hyper-V: C/hyperV.md
+        - Vcpkg: C/vcpkg.md
+    - Math:
+        - Math101: C/Math101.md
+  - pipeline: 
+    - USD: 
+        - USD Install: pipeline/USD/00_install_USD.md
+        - USD Start: pipeline/USD/01_start_USD.md
+        - USD Install: pipeline/USD/00_install_USD.md
+        - USD Start: pipeline/USD/01_start_USD.md
+        - USD Install: pipeline/USD/00_install_USD.md
+        - USD Start: pipeline/USD/01_start_USD.md
+    - OCIO: pipeline/OCIO.md
+    - OCIO Misconception: pipeline/OCIO_DT_misconceptions.md
+  
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: ""
+  - markdown.extensions.admonition:
+  - markdown.extensions.smarty:
+      smart_quotes: false
+  - pymdownx.betterem:
+  - markdown.extensions.attr_list:
+  - markdown.extensions.def_list:
+  - markdown.extensions.tables:
+  - markdown.extensions.abbr:
+  - markdown.extensions.footnotes:
+  - markdown.extensions.md_in_html:
+
+  - pymdownx.superfences:
+      preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.highlight:
+
+      extend_pygments_lang:
+        - name: php-inline
+          lang: php
+          options:
+            startinline: true
+        - name: pycon3
+          lang: pycon
+          options:
+            python3: true
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+      social_url_shorthand: true
+      user: facelessuser
+      repo: coloraide
+
+  - pymdownx.tilde:
+  - pymdownx.caret:
+  - pymdownx.smartsymbols:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+  - pymdownx.escapeall:
+      hardbreak: True
+      nbsp: True
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.progressbar:
+  - pymdownx.striphtml:
+
+  - pymdownx.snippets:
+      base_path:
+      - docs/src/markdown/.snippets
+      - LICENSE.md
+      auto_append:
+      - refs.md
+      - info-container.md
+
+  - pymdownx.keys:
+      separator: "\uff0b"
+  - pymdownx.details:
+  - pymdownx.saneheaders:
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/facelessuser
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/TWs8Tgr
+
+plugins:
+  - search
+  - mkdocs_pymdownx_material_extras
+  - mkdocs-video
+

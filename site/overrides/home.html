@@ -1,0 +1,278 @@
+<!-- Custom CSS and HTML for the Home page -->
+
+{% extends "main.html" %} <!-- extends the main template-->
+{% block tabs %}
+{{ super() }}
+
+<!-- Sets the CSS for the Home page template. It's included in the template because it's hard to conditionally specify  -->
+<style>
+
+ 
+
+    .md-main {
+        flex-grow: 0
+    }
+
+    .md-main__inner {
+        display: flex;
+        height: 100%;
+    }
+
+    /* Color background for top half of home page */
+    .banner-container {
+        padding-top: .0rem;
+        background: var(--md-primary-fg-color);
+    }
+
+    .banner-hero {
+        margin: 32px 2.8rem;
+        color: var(--md-primary-bg-color);
+        justify-content: right;
+    }
+
+    .banner-hero h1 {
+        margin-bottom: 1rem;
+        color: var(--md-primary-bg-color);
+        font-weight: 700
+    }
+
+    .banner-hero__content {
+        padding-bottom: 1rem;
+        margin: 0 auto;
+    }
+
+    .banner-hero__content p a {
+        color: var(--md-primary-bg-color);
+    }
+
+    .banner-hero__content p a:hover {
+        color: var(--md-primary-bg-color);
+        text-decoration: underline;
+    }
+
+    .banner-hero .md-button {
+        margin-top: .5rem;
+        margin-right: .5rem;
+        color: var(--md-primary-bg-color)
+    }
+
+    .banner-hero .md-button--primary {
+        background-color: var(--md-primary-bg-color);
+        color: var(--md-accent-fg-color);
+        border-color: var(--md-primary-bg-color)
+    }
+
+    .banner-hero .md-button:focus,
+    .banner-hero .md-button:hover {
+        background-color: var(--md-accent-fg-color);
+        color: var(--md-default-bg-color);
+        border-color: var(--md-accent-fg-color)
+    }
+
+    .top-hr {
+        margin-top: 42px;
+        flex-wrap: wrap;
+
+    }
+
+    /* Product Items are the feature boxes */
+    .product-item {
+        font-weight: 300;
+        box-sizing: border-box;
+        padding: 0 15px;
+        word-break: break-word
+        color: var(--md-primary-fg-color);
+        border-left: 1px solid var(--md-primary-fg-color);
+    }
+
+    .product-item h2 {
+        color: var(--md-primary-fg-color);
+        font-weight: 500;
+        font-size: 25px;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: normal;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .product-item p {
+        font-size: initial;
+        line-height: 1.5em;
+        margin: 0 0 10px;
+        display: block;
+        word-wrap: break-word;
+    }
+    .product-item ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 0 5px 0;
+        padding-left: 2px;
+        font-size: initial;
+        line-height: 1.8em;
+    }
+
+	.product-item a {
+		color: var(--md-accent-fg-color);
+	}
+
+
+
+/* Media queries */
+
+/* Teeny tiny mobile screens */
+
+    @media screen and (max-width:30em) {
+        .banner-hero h1 {
+            font-size: 1.4rem    
+        }
+
+        .product-item {
+            border-top: 1px solid var(--md-primary-fg-color);
+            border-left: none;
+        }
+    
+    }
+
+/* Somewhere between tiny screen and wide monitor */
+    @media screen and (max-width:76.24em) {
+        .banner-hero h1 {
+            font-size: 1.4rem    
+        }
+
+        .top-hr {
+            display: flex;
+            flex: 0 0 25em;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .product-item {
+            border-top: 1px solid var(--md-primary-fg-color);
+            border-left: none;
+            width: 40em;
+        }
+    
+    }
+
+    @media screen and (min-width:60em) {
+        .md-sidebar--secondary {
+            display: none
+        }
+
+        .banner-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-hero__content {
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+            margin-left: 1.0rem;
+            margin-right: 1.0rem;
+            align-items: center;
+        }
+    }
+
+    /* Big Screens */
+    @media screen and (min-width:76.25em) {
+        .md-sidebar--primary {
+            display: none
+        }
+
+        .top-hr {
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .bottom-hr {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .product-item {
+            flex: 1;
+            min-width: 0;
+            border-left: .25px solid var(--md-primary-fg-color);
+        }
+
+    }
+
+    .hr {
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+
+</style>
+
+
+<!-- PAGE CONTENT -->
+<!-- BUTTONS AND INTRO TEXT -->
+<section class="banner-container">
+    <div class="md-grid md-typeset">
+      <div class="banner-hero">
+        <div class="banner-hero__content">
+          <h1>QDV-PM</h1>
+          <p>Actively engaged in the management of international drilling and work-over operations.</p>
+          
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+            Outline
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" style="margin-left:2px"><path d="M1 5.16772H9.5M9.5 5.16772L6.5 1.66772M9.5 5.16772L6.5 8.66772" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+         
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Main site box descriptions -->
+<div class="top-hr">
+    <div class="product-item">
+        <h2>
+        Manage your Data
+        </h2>
+        <p>Streamline customer data processing, and enrich and connect your data ecosystem.</p>
+		<ul>
+		<l1><a href="data/index.html">Data Management docs</a></li></ul>
+			
+    </div>
+
+    <div class="product-item">
+        <h2>Track Events
+        </h2>
+		<p>Use Amplitude Analytics to empower your teams with self-service insights about your customers.</p>
+        <ul>
+		<li><a href="analytics/index.html">Amplitude Analytics docs</a></li>
+        </ul>
+    </div>
+    <div class="product-item">
+        <h2>
+            Experiment and Test
+        </h2>
+		<p>Amplitude Experiment helps you learn faster and adapt experiences for key segments.</p>
+        <ul>
+		<li><a href="experiment/index.html">Amplitude Experiment docs</a></li></ul>
+    </div>
+</div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+
+<!-- Application footer -->
+{% block footer %}
+  {{ super() }}
+{% endblock %}
