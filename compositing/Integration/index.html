@@ -1033,40 +1033,9 @@ Will try to add all the links to the originals articles when i'll got the time t
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Integration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Integration
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#beauty-grade-guide" class="md-nav__link">
-    Beauty Grade Guide
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1865,21 +1834,6 @@ Will try to add all the links to the originals articles when i'll got the time t
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#beauty-grade-guide" class="md-nav__link">
-    Beauty Grade Guide
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1900,34 +1854,43 @@ will recreate the way the sensor/film captured the footage. This is a chronologi
 through this vast process. In order to follow this guide correctly you should be familiar with photography basics of
 exposition, elements of optics relative to the behaviour of light intensities vs densities, film/sensor supports, NUKE™
 Grade &amp; Toe mathematical operations and digital color fundamentals.</p>
-<h2 id="beauty-grade-guide">Beauty Grade Guide<a class="headerlink" href="#beauty-grade-guide" title="Permanent link"></a></h2>
-<div class="highlight"><pre><span></span><code>- [x]  Viewer Gamma high (recommended at 4).
-- [x]  Grade node (attached to the resulting CG).
-- [x]  (un)premultiply by rgba.alpha.
-- [x]  Black Levels:
-    &gt;- Blackpoint: sample the darkest pixel from the CG.
-    Remember: The intensity of light is relative to exposure but absence of light –black– is absolute.
-    &gt;- Making a selection (rectangle) of the area containing the darkest pixels – please exclude any pixel from
-    outside the premultiplied area.
-    &gt;- Using the Pixel Analyser use the Min colour chip and drag &amp; drop into the colour chip of the Blackpoint knob.
-    &gt;- Lift: sample the darkest area from the Scan.
-    &gt;- Making an accurate selection (rectangle) of the area containing the darkest pixels. Make the selection as big
-    as possible of just pure “black” pixels.
-    &gt;- Using the Pixel Analyser use the Average (or the Median when you have an uneven selection of pixel values)
-    colour chip and drag &amp; drop into the colour chip of the Lift knob.
-- [x] Base &amp; Fog:
-    &gt;- Toe node (attached to the Grade node).
-    &gt;- (un)premultiply by rgba.alpha.
-    &gt;- Link the Lift knob from the Grade node to the Toe (lift knob).
-        *To create a link, drag &amp; drop the curve icon by holding the Ctrl/Command key (if successful a green arrow will appear between the nodes).
-    &gt;- Back to the Grade node again: we push down the black levels to crash against the Toe levels of the base &amp; fog
-    by decreasing the value of the Offset knob.
-        *This is something you do by eye, make sure you lose the same amount of detail in the black levels as your scan.
-    &gt;- Check any transfer unbalance (RGB) from the black levels to the lower midtones (that colour halo).
-        &gt;- TMI color controls of the Offset knob (start with the T [temperature] control (slider) and then move into the
-        M [magenta] control (slider), don’t touch the I [intensity] control (slider), because you already adjusted in
-        previous operations).
-</code></pre></div>
+<h1 id="beauty-grade-guide">Beauty Grade Guide<a class="headerlink" href="#beauty-grade-guide" title="Permanent link"></a></h1>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Viewer Gamma high (recommended at 4).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Grade node (attached to the resulting CG).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> (un)premultiply by rgba.alpha.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Black Levels:<blockquote>
+<ul>
+<li>Blackpoint: sample the darkest pixel from the CG.
+   Remember: The intensity of light is relative to exposure but absence of light –black– is absolute.</li>
+<li>Making a selection (rectangle) of the area containing the darkest pixels – please exclude any pixel from
+    outside the premultiplied area.</li>
+<li>Using the Pixel Analyser use the Min colour chip and drag &amp; drop into the colour chip of the Blackpoint knob.</li>
+<li>Lift: sample the darkest area from the Scan.</li>
+<li>Making an accurate selection (rectangle) of the area containing the darkest pixels. Make the selection as big
+    as possible of just pure “black” pixels.</li>
+<li>Using the Pixel Analyser use the Average (or the Median when you have an uneven selection of pixel values)
+    colour chip and drag &amp; drop into the colour chip of the Lift knob.</li>
+</ul>
+</blockquote>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Base &amp; Fog:<blockquote>
+<ul>
+<li>Toe node (attached to the Grade node).</li>
+<li>(un)premultiply by rgba.alpha.</li>
+<li>Link the Lift knob from the Grade node to the Toe (lift knob).
+    *To create a link, drag &amp; drop the curve icon by holding the Ctrl/Command key (if successful a green arrow will appear between the nodes).</li>
+<li>Back to the Grade node again: we push down the black levels to crash against the Toe levels of the base &amp; fog
+by decreasing the value of the Offset knob.
+    *This is something you do by eye, make sure you lose the same amount of detail in the black levels as your scan.</li>
+<li>Check any transfer unbalance (RGB) from the black levels to the lower midtones (that colour halo).
+    &gt;- TMI color controls of the Offset knob (start with the T [temperature] control (slider) and then move into the
+    M [magenta] control (slider), don’t touch the I [intensity] control (slider), because you already adjusted in
+    previous operations).</li>
+</ul>
+</blockquote>
+</li>
+</ul>
 
 
 
