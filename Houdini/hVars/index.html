@@ -453,6 +453,8 @@ Will try to add all the links to the originals articles when i'll got the time t
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2">
@@ -476,6 +478,59 @@ Will try to add all the links to the originals articles when i'll got the time t
       <a href="../../Maya/IntroMaya/" class="md-nav__link">
         Introduction
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Maya/Python/scripts/" class="md-nav__link">
+        Scripts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -894,6 +949,13 @@ Will try to add all the links to the originals articles when i'll got the time t
         <li class="md-nav__item">
   <a href="#using-environment-variables-on-windows" class="md-nav__link">
     USING ENVIRONMENT VARIABLES ON WINDOWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-environment-variables-on-linux" class="md-nav__link">
+    USING ENVIRONMENT VARIABLES ON LINUX
   </a>
   
 </li>
@@ -2113,6 +2175,13 @@ Will try to add all the links to the originals articles when i'll got the time t
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#using-environment-variables-on-linux" class="md-nav__link">
+    USING ENVIRONMENT VARIABLES ON LINUX
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2136,9 +2205,11 @@ Will try to add all the links to the originals articles when i'll got the time t
 <p>Environment variables might be a bit hidden to many users, but they can be very helpful. Actually a lot of operating system behavior is controlled by them. Apart from configuring Houdini, env vars can be used to modify a search path for binaries, libraries, can set up proxy settings, get current user’s name, path to home, temp directory, hostname, shell and much more.</p>
 <p>An useful thing is that they can be applied globally to the whole system, and locally to the current environment in a shell (a terminal session or environment set up and executed from batch/bash script). For example one might specify global settings which are available to the whole system (path to system cache dir, username, path to root directory of all projects…) and local settings for each configured environments (houdini version, project name, project root, path to textures directory, license information about a plugin…). All child environments (set up through batch/bash script) will inherit global settings (available to the whole operating system or an user) and can have specific local settings needed for their purpose.</p>
 <p>Here are couple of situations which env vars can efficiently address:</p>
-<p>-[x] having a multiple versions of Houdini using different renderer plugin versions and different assets libraries
--[x] using different configurations for different projects / sequences / shots / tasks
--[x] sharing the same settings (home dir, temp dir, cache dir, footage path, rv path) for various applications (Houdini, Nuke, Katana, Maya)</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> having a multiple versions of Houdini using different renderer plugin versions and different assets libraries</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> using different configurations for different projects / sequences / shots / tasks</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> sharing the same settings (home dir, temp dir, cache dir, footage path, rv path) for various applications (Houdini, Nuke, Katana, Maya)</li>
+</ul>
 <h2 id="using-environment-variables-on-windows">USING ENVIRONMENT VARIABLES ON WINDOWS<a class="headerlink" href="#using-environment-variables-on-windows" title="Permanent link"></a></h2>
 <p>Here I will show an example of one of my Houdini startup script which sets an environment for a project and executes Houdini: houdini.bat.
 Note that Houdini understands a lot of useful env vars, documentation can be found here.</p>
@@ -2184,17 +2255,18 @@ rem run Houdini
 <span class="nb">cd</span> ../../
 start houdinifx
 </code></pre></div>
-<p>Here I will explain some of batch syntax:
-<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/echo" title="GitHub User: echo">@echo</a> off – hides printing of commands into the console, it makes output more readable
+<p>Here I will explain some of batch syntax:</p>
+<div class="highlight"><pre><span></span><code>@echo off – hides printing of commands into the console, it makes output more readable
 rem foo – lines starting with rem are comments
-call foo.bat – executes foo.bat batch script and inherits all env vars specified in it
+call foo.bat – executes foo.bat batch script and inherits all env vars specified <span class="k">in</span> it
 %MYVAR% – value of MYVAR variable
-set “MYVAR=FOO” – sets MYVAR variable to FOO – those variables are specific to softwares, which are expecting them
-set “PATH=%PATH%;FOO” – appends FOO to the PATH variable which is used for locating binaries to be executed (houdinifx command is not known to the whole windows system, only when houdini bin directory (containing houdinifx.exe) is appended to the PATH var)
-start foo – executes foo.exe (which must be found in one of the paths in the PATH env var) while passing on all existing variables to this child environment</p>
+<span class="nb">set</span> “MYVAR<span class="o">=</span>FOO” – sets MYVAR variable to FOO – those variables are specific to softwares, which are expecting them
+<span class="nb">set</span> “PATH<span class="o">=</span>%PATH%<span class="p">;</span>FOO” – appends FOO to the PATH variable which is used <span class="k">for</span> locating binaries to be executed <span class="o">(</span>houdinifx <span class="nb">command</span> is not known to the whole windows system, only when houdini bin directory <span class="o">(</span>containing houdinifx.exe<span class="o">)</span> is appended to the PATH var<span class="o">)</span>
+start foo – executes foo.exe <span class="o">(</span>which must be found <span class="k">in</span> one of the paths <span class="k">in</span> the PATH env var<span class="o">)</span> <span class="k">while</span> passing on all existing variables to this child environment
+</code></pre></div>
 <p>This script can be used for setting up local environment variables, to define a variable for the whole system environment on windows, follow this video.</p>
-<p>USING ENVIRONMENT VARIABLES ON LINUX
-(Linux version should be directly transferable to mac OS.)</p>
+<h2 id="using-environment-variables-on-linux">USING ENVIRONMENT VARIABLES ON LINUX<a class="headerlink" href="#using-environment-variables-on-linux" title="Permanent link"></a></h2>
+<p>(Linux version should be directly transferable to mac OS.)</p>
 <p>In linux env vars can be set up on multiple locations (~/.profile, ~/.bashrc, ~/.bash_profile, ~/.bash_login, /etc/environment …)
 System env vars can be specified in /etc/environment. User env vars can be specified in ~/.profile (~ symbol points to the user home directory).
 ~/.profile, ~/.bashrc, ~/.bash_profile, and ~/.bash_login have similar usage, but I recommend using ~/.profile, which is the only one executed when running applications from graphical environment in a desktop session..</p>
