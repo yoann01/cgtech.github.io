@@ -2267,6 +2267,17 @@ Will try to add all the links to the originals articles when i'll got the time t
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>(pyro (volcano cratere center))
+set upward velocity and get center of first input</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">v</span><span class="err">@</span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="n">vector</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getbbox_center</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distance</span><span class="p">(</span><span class="n">center</span><span class="p">,</span><span class="err">@</span><span class="n">P</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//fit the rangeof the vel and make it stronger in the center</span>
+<span class="n">v</span><span class="err">@</span><span class="n">v</span><span class="o">=</span><span class="w"> </span><span class="n">fit</span><span class="p">(</span><span class="n">distance</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.3</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Point Wrangle
 Bisects a vector fixing the first and last points</p>
 </div>
