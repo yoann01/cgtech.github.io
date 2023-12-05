@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../Aces/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../Aces_cheatSheet/">
+        <link rel="next" href="../../Maya/Python/scripts/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>ACES Pipeline - cg_tech</title>
+        <title>Color Management - cg_tech</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aces-color-pipeline" class="md-skip">
+        <a href="#the-benefits-of-color-management" class="md-skip">
           Skip to content
         </a>
       
@@ -141,7 +141,7 @@ cg_tech memo website, based on mkdocs
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ACES Pipeline
+              Color Management
             
           </span>
         </div>
@@ -261,11 +261,13 @@ cg_tech memo website, based on mkdocs
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Nuke/ACES_Nuke_Fundamentals/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -321,13 +323,11 @@ cg_tech memo website, based on mkdocs
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../introToLight/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../colors/introToLight/" class="md-tabs__link">
           
   
     
@@ -475,8 +475,10 @@ cg_tech memo website, based on mkdocs
       
   
   
+    
   
   
+  
     
     
       
@@ -489,14 +491,12 @@ cg_tech memo website, based on mkdocs
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -510,7 +510,7 @@ cg_tech memo website, based on mkdocs
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Nuke
@@ -521,10 +521,28 @@ cg_tech memo website, based on mkdocs
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Nuke/ACES_Nuke_Fundamentals/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Color Management
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -533,6 +551,42 @@ cg_tech memo website, based on mkdocs
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-benefits-of-color-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Benefits of Color Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-management-fundamentals--aces-workflows-in-nuke" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Management Fundamentals &amp; ACES Workflows in Nuke
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -966,10 +1020,8 @@ cg_tech memo website, based on mkdocs
       
   
   
-    
   
   
-  
     
     
       
@@ -984,12 +1036,14 @@ cg_tech memo website, based on mkdocs
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -1003,7 +1057,7 @@ cg_tech memo website, based on mkdocs
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Color
@@ -1017,7 +1071,7 @@ cg_tech memo website, based on mkdocs
   
   
     <li class="md-nav__item">
-      <a href="../introToLight/" class="md-nav__link">
+      <a href="../../colors/introToLight/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1035,10 +1089,8 @@ cg_tech memo website, based on mkdocs
                 
   
   
-    
   
   
-  
     
     
       
@@ -1053,12 +1105,14 @@ cg_tech memo website, based on mkdocs
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
@@ -1072,7 +1126,7 @@ cg_tech memo website, based on mkdocs
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             ColorSpace
@@ -1086,7 +1140,7 @@ cg_tech memo website, based on mkdocs
   
   
     <li class="md-nav__item">
-      <a href="../CIE/" class="md-nav__link">
+      <a href="../../colors/CIE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,10 +1158,8 @@ cg_tech memo website, based on mkdocs
                 
   
   
-    
   
   
-  
     
     
       
@@ -1123,12 +1175,14 @@ cg_tech memo website, based on mkdocs
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2_2" >
         
           
           <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
@@ -1142,7 +1196,7 @@ cg_tech memo website, based on mkdocs
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2_2">
             <span class="md-nav__icon md-icon"></span>
             ACES
@@ -1156,7 +1210,7 @@ cg_tech memo website, based on mkdocs
   
   
     <li class="md-nav__item">
-      <a href="../Aces/" class="md-nav__link">
+      <a href="../../colors/Aces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,19 +1228,10 @@ cg_tech memo website, based on mkdocs
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../colors/Aces_workflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1195,7 +1240,6 @@ cg_tech memo website, based on mkdocs
   
 
       </a>
-      
     </li>
   
 
@@ -1208,7 +1252,7 @@ cg_tech memo website, based on mkdocs
   
   
     <li class="md-nav__item">
-      <a href="../Aces_cheatSheet/" class="md-nav__link">
+      <a href="../../colors/Aces_cheatSheet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1229,7 +1273,7 @@ cg_tech memo website, based on mkdocs
   
   
     <li class="md-nav__item">
-      <a href="../ACES_DCC/" class="md-nav__link">
+      <a href="../../colors/ACES_DCC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2312,8 +2356,32 @@ cg_tech memo website, based on mkdocs
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-benefits-of-color-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Benefits of Color Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-management-fundamentals--aces-workflows-in-nuke" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Management Fundamentals &amp; ACES Workflows in Nuke
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2329,59 +2397,16 @@ cg_tech memo website, based on mkdocs
                   
 
 
-<div><h1 id="aces-color-pipeline">ACES Color Pipeline<a class="headerlink" href="#aces-color-pipeline" title="Permanent link"></a></h1>
-<pre class="mermaid"><code>flowchart LR
-  A(Scene Tristimuli) --&gt; B[OECF]
-  B --&gt; C[IDT] 
-  C --&gt; D[LMT]
-  D --&gt; E[RRT]
-  E --&gt; F[ODT]
-  F --&gt; G[EOCF]
-  G --&gt; H(Display Tristimuli)
-  C --&gt;|ACES| E
- style A stroke-width:2px,stroke-dasharray: 5 5
- style H stroke-width:2px,stroke-dasharray: 5 5
-</code></pre>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> <strong>Tristimulis</strong> refers to linear light, code value (from 0 to ) are linearly related to the power in the light 
-that is entering in the camera lens. those numbers are 12bits and typically we don't have the downstream infrastruture 
-that will handle 12 bits well established.</p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> <strong>OECF</strong> Tippically the first step in the color pipeline is an OECF (<strong>opto electronic conversion function</strong>), in the old days
-we will would've call this GAMMA.Built in the camera, </p>
-</li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked><span class="task-list-indicator"></span></label> <strong>IDT</strong> (input device transform) ingesting data map from one linear light color space to another. 3*3 matrix transform </p>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>IDT:</p>
-<blockquote>
-<ul>
-<li>The Input Device Transform is the transform used to convert the pixel colors of images/videos from specific devices into an ACES      colorspace.</li>
-</ul>
-</blockquote>
-<p>RRT:</p>
-<blockquote>
-<ul>
-<li>The Reference Rendering Transform prepares scene referred linear data into high dynamic range display referred data. This data is     then meant to be handed over to an ODT to convert the data to be viewed in a specific display type.</li>
-</ul>
-</blockquote>
-<p>ODT:</p>
-<blockquote>
-<ul>
-<li>The Output Display Transform is responsible for converting the data created by the RRT to data that can be viewed on specific     devices or color-spaces: sRGB, P3, Rec. 709.</li>
-</ul>
-</blockquote>
-</div>
-<p>LMT
-RRT
-ODT
-ROCF
-Display Tristimuli</p></div>
+  <h1>Color Management</h1>
+
+<div><h2 id="the-benefits-of-color-management">The Benefits of Color Management<a class="headerlink" href="#the-benefits-of-color-management" title="Permanent link"></a></h2>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/vdmFjFoE2YA" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<p>This video defines Color Management and explains why it is important to the Netflix production process. It illustrates the differences between a non-color managed workflow and a color managed one and how ACES (the Academy Color Encoding System) helps to standardize Color Management.</p>
+<h2 id="color-management-fundamentals--aces-workflows-in-nuke">Color Management Fundamentals &amp; ACES Workflows in Nuke<a class="headerlink" href="#color-management-fundamentals--aces-workflows-in-nuke" title="Permanent link"></a></h2>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/Hlj5ep-85ys" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<p>In this series, acclaimed filmmaker and VFX Supervisor, Victor Perez demystifies the science of color management and shows you how to work with ACES in Nuke.</p>
+<p>In this first video, Victor takes you from understanding how our brains interpret light frequencies as colors to the history of color reproduction in imaging technology and beyond.</p>
+<p>By the end, you’ll have everything you need to know about color space and insight into why it’s so important to achieve a consistent standard of color reproduction, quality and artistic intent across an entire production.</p></div>
 
 
 
@@ -2414,7 +2439,7 @@ Display Tristimuli</p></div>
     >
       
         <a
-          href="../Aces/"
+          href="../.."
           class="md-footer__link md-footer__link--prev"
           rel="prev"
         >
@@ -2426,14 +2451,14 @@ Display Tristimuli</p></div>
               <span class="md-footer__direction">
                 Previous
               </span>
-              ACES intro
+              Home
             </div>
           </div>
         </a>
       
       
         <a
-          href="../Aces_cheatSheet/"
+          href="../../Maya/Python/scripts/"
           class="md-footer__link md-footer__link--next"
           rel="next"
         >
@@ -2442,7 +2467,7 @@ Display Tristimuli</p></div>
               <span class="md-footer__direction">
                 Next
               </span>
-              ACES Notes
+              Scripts
             </div>
           </div>
           <div class="md-footer__button md-icon">
